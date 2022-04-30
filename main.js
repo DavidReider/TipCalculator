@@ -7,6 +7,10 @@
       const fifteen = calculateTip(e.target.value, 15).toFixed(2);
       const twenty = calculateTip(e.target.value, 20).toFixed(2);
       const twentyfive = calculateTip(e.target.value, 25).toFixed(2);
+
+      document.getElementById("fifteen").innerHTML = "$" + fifteen;
+      document.getElementById("twenty").innerHTML = "$" + twenty;
+      document.getElementById("twentyfive").innerHTML = "$" + twentyfive;
     });
 
     //listen for click on calculate button
@@ -25,5 +29,12 @@
 
   function calculateTip(billTotal, tipAmount) {
     return billTotal * (tipAmount / 100);
+  }
+
+  function insertTip(tipAmount) {
+    //get tip amount input
+    const tipAmountInput = document.getElementById("tip-amount");
+    //set tip amount input value
+    tipAmountInput.value = tipAmount;
   }
 })();

@@ -24,6 +24,8 @@
 
         //calculate tip
         const tip = calculateTip(bill, customTip).toFixed(2);
+        insertTip(tip);
+        adjustEnteredAmount(customTip);
       });
   }
 
@@ -33,8 +35,12 @@
 
   function insertTip(tipAmount) {
     //get tip amount input
-    const tipAmountInput = document.getElementById("tip-amount");
+    const tipAmountInput = document.getElementById("tip");
     //set tip amount input value
-    tipAmountInput.value = tipAmount;
+    tipAmountInput.innerHTML = "$" + tipAmount;
+  }
+
+  function adjustEnteredAmount(customTip) {
+    document.getElementById("entered-amount").innerHTML = customTip + "%";
   }
 })();

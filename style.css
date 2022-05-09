@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: auto;
+  align-items: center;
+}
+
+.input-container {
+  margin-top: 50px;
+}
+
+.auto-tip-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+
+.percentage {
+  margin: 0px 30px;
+  background-color: rgb(251, 255, 215);
+}
+
+.custom-tip-container {
+  margin: 10px 0px;
+}
+
+#calculate-tip {
+  padding: 10px;
+  margin: 10px;
+}
+
+#entered-amount,
+#tip {
+  background-color: rgb(251, 255, 215);
+}

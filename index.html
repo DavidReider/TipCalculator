@@ -8,25 +8,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>QuickTip</h1>
-    <label for="bill">Bill Amount: $ </label>
-    <input type="number" name="bill" id="bill" placeholder="Example: 23.65" />
-    <div class="15-percent">15% - <span id="fifteen"></span></div>
-    <div class="20-percent">20% - <span id="twenty"></span></div>
-    <div class="25-percent">25% - <span id="twentyfive"></span></div>
-    <label for="custom-tip">What percentage would you like to tip:</label>
-    <input
-      type="text"
-      name="custom-tip"
-      id="custom-tip"
-      placeholder="Example: 17"
-    />
-    <button id="calculate-tip">Calculate Tip</button>
-    <div id="tip-amount">
-      Output for <span class="entered-amount" id="entered-amount">17%</span>:
-      <span id="tip"></span>
+    <div class="container">
+      <h1>QuickTip</h1>
+      <div class="input-container">
+        <label for="bill">Bill Amount: $ </label>
+        <input
+          type="number"
+          name="bill"
+          id="bill"
+          placeholder="Example: 23.65"
+        />
+      </div>
+      <div class="auto-tip-container">
+        <div class="15-percent percentage">
+          15% - <span id="fifteen"></span>
+        </div>
+        <div class="20-percent percentage">20% - <span id="twenty"></span></div>
+        <div class="25-percent percentage">
+          25% - <span id="twentyfive"></span>
+        </div>
+      </div>
+      <div class="custom-tip-container">
+        <label for="custom-tip">What percentage would you like to tip:</label>
+        <input
+          type="text"
+          name="custom-tip"
+          id="custom-tip"
+          placeholder="Example: 17"
+        />
+      </div>
+      <button id="calculate-tip">Calculate Tip</button>
+      <div id="tip-amount">
+        Output for
+        <span class="entered-amount" id="entered-amount">17% - </span>
+        <span id="tip"></span>
+      </div>
     </div>
-
     <script src="main.js"></script>
   </body>
 </html>
